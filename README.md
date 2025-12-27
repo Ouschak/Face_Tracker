@@ -4,7 +4,6 @@ Focus Tracker is a Python backend that uses OpenCV and MediaPipe to compute a `l
 It is part of a larger desktop productivity monitoring system.
 
 This backend is **responsible only for the vision logic and signals**.  
-Frontend and UI are separate and not included here.
 
 ---
 
@@ -15,16 +14,7 @@ Frontend and UI are separate and not included here.
 - Computes a simple proxy for “user looking at the screen”
 - Exposes structured signals used by the rest of the application
 
----
 
-## 🚀 Requirements
-
-- Fedora Linux (X11 recommended)
-- Python 3.10+
-- Camera access
-- X11 session (for display and window tracking)
-
----
 
 ## 📦 Setup (Backend Only)
 
@@ -58,13 +48,6 @@ Run the vision sandbox:
 python -m backend.app
 ```
 
-or
-
-```bash
-python -m backend.app
-```
-
-This ensures Python sees your `backend` package correctly.
 
 ---
 
@@ -95,5 +78,21 @@ backend/
     └── ...
 ```
 
-Only backend logic is included here. UI and frontend live outside this repository.
+
+## Logging
+
+The application writes logs to `app.log`.
+
+### Log rotation (Linux)
+
+For long-running usage, log rotation is recommended.
+A sample `logrotate` configuration is provided in:
+
+To enable it on Fedora/Linux:
+
+sudo cp config/log_rotate/ai-focus.conf /etc/log_rotate.d/ai-focus
+
+
+
+
 
