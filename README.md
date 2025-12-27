@@ -1,9 +1,7 @@
 # Focus Tracker Backend
 
-Focus Tracker is a Python backend that uses OpenCV and MediaPipe to compute a `looking_proxy` signal based on camera input.  
-It is part of a larger desktop productivity monitoring system.
-
-This backend is **responsible only for the vision logic and signals**.  
+Focus Tracker is a Python backend that uses OpenCV and MediaPipe to detect the presence of a user’s face and estimate whether the user is looking directly at the camera.
+This backend component is designed to be integrated into a larger desktop productivity monitoring system.
 
 ---
 
