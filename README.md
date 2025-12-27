@@ -5,7 +5,7 @@ This backend component is designed to be integrated into a larger desktop produc
 
 ---
 
-## 🧠 What This Backend Does
+##  What This Backend Does
 
 - Opens the camera using OpenCV
 - Detects a face and landmarks using MediaPipe
@@ -14,7 +14,7 @@ This backend component is designed to be integrated into a larger desktop produc
 
 
 
-## 📦 Setup (Backend Only)
+##  Setup (Backend Only)
 
 1. Create a virtual environment:
 
@@ -38,7 +38,7 @@ pip install -r requirements.txt
 
 ---
 
-## ▶️ Running the Vision Module
+##  Running the Vision Module
 
 Run the vision sandbox:
 
