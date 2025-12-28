@@ -13,8 +13,8 @@ class LookingSensor:
         model_path="models/face_landmarker.task",
         debug=True,
         padding_pct=0.10,
-        look_threshold=0.20,  # threshold (seuil) for "looking forward"
-        smooth_alpha=0.7,  # smoothing (lissage). higher = smoother, slower response
+        look_threshold=0.20,  # threshold for looking forward
+        smooth_alpha=0.7,  
     ):
         self.log = logging.getLogger(self.__class__.__name__)
         self.debug = debug
@@ -22,7 +22,7 @@ class LookingSensor:
 
         self.look_threshold = float(look_threshold)
         self.smooth_alpha = float(smooth_alpha)
-        self.moving_avg = None  # EMA (moving average). moyenne mobile
+        self.moving_avg = None 
 
         options = vision.FaceLandmarkerOptions(
             base_options=base_options.BaseOptions(model_asset_path=model_path),
@@ -79,7 +79,6 @@ class LookingSensor:
 
         looking = abs(self.moving_avg) < self.look_threshold
 
-        # Optional bbox in pixels (kept from your version)
         pad_x = self.padding_pct * face_width_norm
         pad_y = self.padding_pct * face_height_norm
         x1 = int(max(0, (leftmost.x - pad_x) * w))
